@@ -13,10 +13,10 @@ HALF_PAD_WIDTH = PAD_WIDTH / 2
 HALF_PAD_HEIGHT = PAD_HEIGHT / 2
 LEFT = False
 RIGHT = True
-vert_vel_l = - random.randrange(2, 5)
-hori_vel_l = - random.randrange(2, 5)
-vert_vel_r = - random.randrange(2, 5)
-hori_vel_r =  random.randrange(2, 5)
+vert_vel_l = - random.randrange(2, 4)
+hori_vel_l = - random.randrange(2, 4)
+vert_vel_r = - random.randrange(2, 4)
+hori_vel_r =  random.randrange(2, 4)
 # initialize ball_pos and ball_vel for new bal in middle of table
 # if direction is RIGHT, the ball's velocity is upper right, else upper left
 def spawn_ball(direction):
@@ -51,10 +51,14 @@ def draw(canvas):
     ball_pos[0] += ball_vel[0]
     ball_pos[1] += ball_vel[1]
     
-    #if ball_pos == LEFT:
-    #    ball_pos = [WIDTH / 2, HEIGHT / 2]
-    #elif ball_pos == RIGHT:
-    #    ball_pos = [WIDTH / 2, HEIGHT / 2]
+    if ball_pos[0] <= BALL_RADIUS:
+        ball_pos = [WIDTH / 2, HEIGHT / 2]
+        direction = spawn_ball(RIGHT)
+    elif ball_pos[0] >= WIDTH - BALL_RADIUS:
+        ball_pos = [WIDTH / 2, HEIGHT / 2]
+        direction = spawn_ball(LEFT)
+        
+        
     # draw ball
     canvas.draw_circle(ball_pos, BALL_RADIUS, 2, "White", "White")
     # update paddle's vertical position, keep paddle on the screen
