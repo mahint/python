@@ -46,7 +46,9 @@ def draw(canvas):
     canvas.draw_line([WIDTH / 2, 0],[WIDTH / 2, HEIGHT], 1, "White")
     canvas.draw_line([PAD_WIDTH, 0],[PAD_WIDTH, HEIGHT], 1, "White")
     canvas.draw_line([WIDTH - PAD_WIDTH, 0],[WIDTH - PAD_WIDTH, HEIGHT], 1, "White")
-        
+    canvas.draw_line([PAD_WIDTH, PAD_HEIGHT], [PAD_WIDTH, HEIGHT / 2], PAD_WIDTH, "White")
+    canvas.draw_line([WIDTH - PAD_WIDTH, PAD_HEIGHT], [WIDTH - PAD_WIDTH, HEIGHT / 2], PAD_WIDTH, "White")
+   
     # update ball
     ball_pos[0] += ball_vel[0]
     ball_pos[1] += ball_vel[1]
