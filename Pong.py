@@ -18,9 +18,9 @@ hori_vel_l = - random.randrange(2, 4)
 vert_vel_r = - random.randrange(2, 4)
 hori_vel_r =  random.randrange(2, 4)
 paddle1_pos = [PAD_WIDTH, PAD_HEIGHT, PAD_WIDTH, HEIGHT / 2]
-paddle1_vel = [4, 4]
+paddle1_vel = 4
 paddle2_pos = [WIDTH - PAD_WIDTH, 0, WIDTH - PAD_WIDTH, HEIGHT]
-paddle2_vel = [4, 4]
+paddle2_vel = 4
 
 # initialize ball_pos and ball_vel for new bal in middle of table
 # if direction is RIGHT, the ball's velocity is upper right, else upper left
@@ -65,8 +65,6 @@ def draw(canvas):
     # draw ball
     canvas.draw_circle(ball_pos, BALL_RADIUS, 2, "White", "White")
     # update paddle's vertical position, keep paddle on the screen
-    paddle1_pos[1] += paddle1_vel[1]
-    paddle2_pos[1] += paddle2_vel[1]
     # draw paddles
     canvas.draw_line([PAD_WIDTH, PAD_HEIGHT], [PAD_WIDTH, HEIGHT / 2], PAD_WIDTH, "White")
     canvas.draw_line([WIDTH - PAD_WIDTH, PAD_HEIGHT], [WIDTH - PAD_WIDTH, HEIGHT / 2], PAD_WIDTH, "White")
@@ -83,7 +81,11 @@ def draw(canvas):
         
 def keydown(key):
     global paddle1_vel, paddle2_vel
-    
+    if key == simplegui.KEY_MAP["down"]:
+        paddle1_pos[1] += paddle1_vel
+        print paddle1_pos
+    elif key == simplegui.KEY_MAP["up"]:
+        paddle1_pos[1] -= paddle1_vel
 def keyup(key):
     global paddle1_vel, paddle2_vel
 
