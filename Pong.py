@@ -20,10 +20,10 @@ vert_vel_r = - random.randrange(2, 4)
 hori_vel_r =  random.randrange(2, 4)
 paddle1_pos_x = [PAD_WIDTH, HEIGHT / 2]
 paddle1_pos_y = [PAD_WIDTH, PAD_HEIGHT]
-paddle1_vel = 16
+paddle1_vel = 32
 paddle2_pos_x = [WIDTH - PAD_WIDTH, HEIGHT / 2]
 paddle2_pos_y = [WIDTH - PAD_WIDTH, PAD_HEIGHT]
-paddle2_vel = 16
+paddle2_vel = 32
 
 # initialize ball_pos and ball_vel for new bal in middle of table
 # if direction is RIGHT, the ball's velocity is upper right, else upper left
@@ -69,10 +69,25 @@ def draw(canvas):
     canvas.draw_circle(ball_pos, BALL_RADIUS, 2, "White", "White")
     # update paddle's vertical position, keep paddle on the screen
     if paddle1_pos_x[1] >= HEIGHT:
-        print paddle1_pos_x
         paddle1_pos_x[1] = HEIGHT
+        paddle1_pos_y[1] = (HEIGHT/2)+PAD_HEIGHT
+
+    if paddle1_pos_y[1] <= 0:
+        paddle1_pos_x[1] = (HEIGHT/2)-PAD_HEIGHT
+        paddle1_pos_y[1] = 0
+        
+    if paddle2_pos_x[1] >= HEIGHT:
+        paddle2_pos_x[1] = HEIGHT
+        paddle2_pos_y[1] = (HEIGHT/2)+PAD_HEIGHT
+
+    if paddle2_pos_y[1] <= 0:
+        paddle2_pos_x[1] = (HEIGHT/2)-PAD_HEIGHT
+        paddle2_pos_y[1] = 0        
+        
     # draw paddles
-    canvas.draw_line(paddle1_pos_x, paddle1_pos_y, PAD_WIDTH, "White")
+    #print "drawing"
+    canvas.draw_line(paddle1_pos_x, paddle1_pos_y, PAD_WIDTH, "White")   
+
     canvas.draw_line(paddle2_pos_x, paddle2_pos_y, PAD_WIDTH, "White")
     # determine whether paddle and ball collide    
     if ball_pos[0] <= BALL_RADIUS:
