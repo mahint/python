@@ -20,11 +20,11 @@ vert_vel_r = - random.randrange(2, 4)
 hori_vel_r =  random.randrange(2, 4)
 paddle1_pos_x = [PAD_WIDTH, HEIGHT / 2]
 paddle1_pos_y = [PAD_WIDTH, PAD_HEIGHT]
-paddle1_vel = 32
+paddle1_vel = [0, 0]
 paddle2_pos_x = [WIDTH - PAD_WIDTH, HEIGHT / 2]
 paddle2_pos_y = [WIDTH - PAD_WIDTH, PAD_HEIGHT]
-paddle2_vel = 32
-
+paddle2_vel = [0, 0]
+paddle1_pos = [HALF_PAD_WIDTH, HALF_PAD_HEIGHT]
 # initialize ball_pos and ball_vel for new bal in middle of table
 # if direction is RIGHT, the ball's velocity is upper right, else upper left
 def spawn_ball(direction):
@@ -68,6 +68,12 @@ def draw(canvas):
     # draw ball
     canvas.draw_circle(ball_pos, BALL_RADIUS, 2, "White", "White")
     # update paddle's vertical position, keep paddle on the screen
+    paddle1_pos_x[1] += paddle1_vel[1]
+    paddle1_pos_y[1] += paddle1_vel[1]
+    
+    paddle2_pos_x[1] += paddle2_vel[1]
+    paddle2_pos_y[1] += paddle2_vel[1]
+    
     if paddle1_pos_x[1] >= HEIGHT:
         paddle1_pos_x[1] = HEIGHT
         paddle1_pos_y[1] = (HEIGHT/2)+PAD_HEIGHT
@@ -85,7 +91,6 @@ def draw(canvas):
         paddle2_pos_y[1] = 0        
         
     # draw paddles
-    #print "drawing"
     canvas.draw_line(paddle1_pos_x, paddle1_pos_y, PAD_WIDTH, "White")   
 
     canvas.draw_line(paddle2_pos_x, paddle2_pos_y, PAD_WIDTH, "White")
@@ -101,22 +106,26 @@ def draw(canvas):
     # draw scores
         
 def keydown(key):
-    global paddle1_vel, paddle2_vel, PAD_HEIGHT, HEIGHT, direction
+    global paddle1_vel, paddle2_vel, acc
+    acc = 3
     if key == simplegui.KEY_MAP["s"]:
-        paddle1_pos_x[1] += paddle1_vel
-        paddle1_pos_y[1] += paddle1_vel
+        paddle1_vel[1] += acc
     elif key == simplegui.KEY_MAP["w"]:
-        paddle1_pos_x[1] -= paddle1_vel
-        paddle1_pos_y[1] -= paddle1_vel
+        paddle1_vel[1] -= acc 
     elif key == simplegui.KEY_MAP["up"]:
-        paddle2_pos_x[1] -= paddle2_vel
-        paddle2_pos_y[1] -= paddle2_vel
+        paddle2_vel[1] -= acc
     elif key == simplegui.KEY_MAP["down"]:
-        paddle2_pos_x[1] += paddle2_vel
-        paddle2_pos_y[1] += paddle2_vel
+        paddle2_vel [1] += acc
 def keyup(key):
-    global paddle1_vel, paddle2_vel
-
+    global paddle1_vel, paddle2_vel, acc
+    if key == simplegui.KEY_MAP["s"]:
+        paddle1_vel[1] -= acc
+    elif key == simplegui.KEY_MAP["w"]:
+        paddle1_vel[1] += acc
+    elif key == simplegui.KEY_MAP["up"]:
+        paddle2_vel[1] += acc
+    elif key == simplegui.KEY_MAP["down"]:
+        paddle2_vel[1] -= acc
 
 # create frame
 frame = simplegui.create_frame("Pong", WIDTH, HEIGHT)
