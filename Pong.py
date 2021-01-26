@@ -1,4 +1,4 @@
-  
+
 # Implementation of classic arcade game Pong
 
 import simplegui
@@ -24,12 +24,14 @@ paddle1_vel = [0, 0]
 paddle2_pos_x = [WIDTH - PAD_WIDTH, HEIGHT / 2]
 paddle2_pos_y = [WIDTH - PAD_WIDTH, PAD_HEIGHT]
 paddle2_vel = [0, 0]
-paddle1_pos = [HALF_PAD_WIDTH, HALF_PAD_HEIGHT]
+paddle1_pos = [paddle1_pos_x, paddle1_pos_y]
+#paddle1_pos = [HALF_PAD_WIDTH, HALF_PAD_HEIGHT]
 # initialize ball_pos and ball_vel for new bal in middle of table
 # if direction is RIGHT, the ball's velocity is upper right, else upper left
 def spawn_ball(direction):
     global ball_pos, ball_vel # these are vectors stored as lists
     ball_pos = [WIDTH / 2, HEIGHT / 2]
+    #ball_pos = [18, HEIGHT / 2]
     direction = random.randrange(1, 3)    
     if direction == 1:
         direction = LEFT
@@ -58,11 +60,18 @@ def draw(canvas):
     ball_pos[1] += ball_vel[1]
     
     if ball_pos[0] <= BALL_RADIUS:
-        ball_pos = [WIDTH / 2, HEIGHT / 2]
-        direction = spawn_ball(RIGHT)
-    elif ball_pos[0] >= WIDTH - BALL_RADIUS:
-        ball_pos = [WIDTH / 2, HEIGHT / 2]
-        direction = spawn_ball(LEFT)
+        if ball_pos[0] == :
+            ball_vel[0] = - ball_vel[0]
+            print ball_pos
+        else:
+            print ball_pos
+            ball_pos = [WIDTH / 2, HEIGHT / 2]
+            direction = spawn_ball(RIGHT)
+    #elif ball_pos[0] >= WIDTH - BALL_RADIUS:
+        #ball_pos = [WIDTH / 2, HEIGHT / 2]
+        #direction = spawn_ball(LEFT)
+        #ball_vel[0] = - ball_vel[0]
+        
         
         
     # draw ball
