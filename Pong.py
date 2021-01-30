@@ -50,23 +50,41 @@ def new_game():
     
 def draw(canvas):
     global score1, score2, paddle1_pos, paddle2_pos, ball_pos, ball_vel
-        
+
     # draw mid line and gutters
     canvas.draw_line([WIDTH / 2, 0],[WIDTH / 2, HEIGHT], 1, "White")
     canvas.draw_line([PAD_WIDTH, 0],[PAD_WIDTH, HEIGHT], 1, "White")
     canvas.draw_line([WIDTH - PAD_WIDTH, 0],[WIDTH - PAD_WIDTH, HEIGHT], 1, "White")   
+    
+    # position of paddles
+    paddle1_text_pos_x = [ paddle1_pos_x[0]+4, paddle1_pos_x[1]-4]
+    canvas.draw_text(str(paddle1_pos_x), paddle1_text_pos_x, 20, 'Red')
+    paddle1_text_pos_y = [ paddle1_pos_y[0]+4, paddle1_pos_y[1]+14]
+    canvas.draw_text(str(paddle1_pos_y), paddle1_text_pos_y, 20, 'Red')
+    
     # update ball
     ball_pos[0] += ball_vel[0]
     ball_pos[1] += ball_vel[1]
-    
-    if ball_pos[0] <= BALL_RADIUS:
-        if ball_pos[0] == :
-            ball_vel[0] = - ball_vel[0]
-            print ball_pos
+    ball_text_pos = [ ball_pos[0]+20, ball_pos[1]]
+    canvas.draw_text(str(ball_text_pos), ball_text_pos, 20, 'Red')
+    if ball_pos[0] == BALL_RADIUS+10:
+        print "ball position: " + str(ball_pos)
+        print "paddle pos x: " + str(paddle1_pos_x)
+        print "paddle pos y: " + str(paddle1_pos_y)
+        if( (ball_pos[1] > paddle1_pos_y[1]) and (ball_pos[1] < paddle1_pos_x[1]) ):
+            print "ball within paddle"
         else:
-            print ball_pos
-            ball_pos = [WIDTH / 2, HEIGHT / 2]
-            direction = spawn_ball(RIGHT)
+            print "LOST"
+        #if ball_pos[0] == 40:
+        #    ball_vel[0] =- ball_vel[0]
+            
+        #    print ball_pos
+        #elif ball_pos[0] == BALL_RADIUS:
+        #    print ball_pos
+        #else:
+            #print ball_pos
+        #    ball_pos = [WIDTH / 2, HEIGHT / 2]
+        #    direction = spawn_ball(RIGHT)
     #elif ball_pos[0] >= WIDTH - BALL_RADIUS:
         #ball_pos = [WIDTH / 2, HEIGHT / 2]
         #direction = spawn_ball(LEFT)
