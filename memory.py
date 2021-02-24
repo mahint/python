@@ -3,17 +3,17 @@
 import simplegui
 import random
 
-CARD_WIDTH = 100
-CARD_HEIGHT = 50
+CARD_WIDTH = 50
+CARD_HEIGHT = 100
 
 list1_numbers = range(0, 8)
 list2_numbers = range(0, 8)
-lists = []
+cards = []
 
-lists.extend(list1_numbers)
-lists.extend(list2_numbers)
+cards.extend(list1_numbers)
+cards.extend(list2_numbers)
 
-print lists
+print cards
 
 # helper function to initialize globals
 def new_game():
@@ -28,7 +28,9 @@ def mouseclick(pos):
                         
 # cards are logically 50x100 pixels in size    
 def draw(canvas):
-    canvas.draw_polygon([[0, 0], [0, CARD_WIDTH], [0, CARD_HEIGHT]], CARD_WIDTH, "Green") 
+    for card_index in range(len(cards)):
+        card_pos = 50 * card_index
+        canvas.draw_text(str(cards[card_index]), (0, card_pos), 48, "Green")
     
 # create frame and add a button and labels
 frame = simplegui.create_frame("Memory", 800, 100)
