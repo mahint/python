@@ -13,7 +13,8 @@ cards = []
 cards.extend(list1_numbers)
 cards.extend(list2_numbers)
 
-print cards
+
+random.shuffle(cards)
 
 # helper function to initialize globals
 def new_game():
@@ -30,7 +31,9 @@ def mouseclick(pos):
 def draw(canvas):
     for card_index in range(len(cards)):
         card_pos = 50 * card_index
-        canvas.draw_text(str(cards[card_index]), (0, card_pos), 48, "Green")
+        canvas.draw_text(str(cards[card_index]), [card_pos, 65], 48, "White")
+        canvas.draw_polygon([[0, 0], [50, 0], [50, 100], [0, 100]], 50, "Green", "Red")
+    
     
 # create frame and add a button and labels
 frame = simplegui.create_frame("Memory", 800, 100)
