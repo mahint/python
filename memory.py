@@ -1,4 +1,3 @@
-  
 # implementation of card game - Memory
 
 import simplegui
@@ -93,35 +92,54 @@ def mouseclick(pos):
     if pos[0] < CARD_WIDTH:
         CARD1_WIDTH = 0
         #if state == 2: 
-        #exposed.append(cards[0])  
-        print "exposed: " + str(exposed)                
-        if len(exposed) > 1:
-            print "exposed is more than one"
-            if not int(exposed[0]) in cards:
-                print "A"
+        #exposed.append(cards[0])                
+        if len(exposed) <= 1:
+            #print cards
+            #print "exposed is more than one"
+            if not cards[0] in exposed:
+                #print "is not in exposed"
                 exposed.append(cards[0])
         else:
-            print "B"
+            #print "B"
             exposed.append(cards[0])
             #print "WORKS"
+            
+        print exposed 
         
     elif (pos[0] > 50) and (pos[0] < 100):
         CARD2_WIDTH = 0
         CARD2_WIDTH_2 = 0
-        exposed.append(cards[1])
-        print exposed
-        #print "WORKS"
+        if len(exposed) <= 2:
+            if not cards[1] in exposed:
+                exposed.append(cards[1])
         
+        else:
+            exposed.append(cards[1])
+        
+        print exposed 
+     
     elif (pos[0] > 100) and (pos[0] < 150):
         CARD3_WIDTH = 0
         CARD3_WIDTH_2 = 0
-        exposed.append(cards[2])
+        if len(exposed) <= 3:
+            if not cards[2] in exposed:
+                exposed.append(cards[2])
+                
+        else:
+            exposed.append(cards[2])
+            
         print exposed
         
     elif (pos[0] > 150) and (pos[0] < 200):
         CARD4_WIDTH = 0
         CARD4_WIDTH_2 = 0
-        exposed.append(cards[3])
+        if len(exposed) <= 4:
+            if not cards[3] in exposed:
+                exposed.append(cards[3])
+                
+        else:
+            exposed.append(cards[3])
+            
         print exposed
         
     elif (pos[0] > 200) and (pos[0] < 250):
