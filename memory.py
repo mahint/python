@@ -146,7 +146,6 @@ def mouseclick(pos):
             if not cards[2] in exposed:
                 exposed.append(cards[2])
         if state == 2:
-            if not cards[2] in exposed:
                 exposed.append(cards[2])
         elif state > 2:
             exposed = []
@@ -163,7 +162,6 @@ def mouseclick(pos):
             if not cards[3] in exposed:
                 exposed.append(cards[3])
         if state == 2:
-            if not cards[3] in exposed:
                 exposed.append(cards[3])                
         elif state > 2:
             exposed = []
@@ -180,7 +178,6 @@ def mouseclick(pos):
             if not cards[4] in exposed:
                 exposed.append(cards[4])
         if state == 2:
-            if not cards[4] in exposed:
                 exposed.append(cards[4])                
         elif state > 2:
             exposed = []
@@ -197,7 +194,6 @@ def mouseclick(pos):
             if not cards[5] in exposed:
                 exposed.append(cards[5])
         if state == 2:
-            if not cards[5] in exposed:
                 exposed.append(cards[5])                
         elif state > 2:
             exposed = []
@@ -214,7 +210,6 @@ def mouseclick(pos):
             if not cards[6] in exposed:
                 exposed.append(cards[6])
         if state == 2:
-            if not cards[6] in exposed:
                 exposed.append(cards[6])                
         elif state > 2:
             exposed = []
@@ -231,7 +226,6 @@ def mouseclick(pos):
             if not cards[7] in exposed:
                 exposed.append(cards[7])
         if state == 2:
-            if not cards[7] in exposed:
                 exposed.append(cards[7])                
         elif state > 2:
             exposed = []
@@ -248,7 +242,6 @@ def mouseclick(pos):
             if not cards[8] in exposed:
                 exposed.append(cards[8])
         if state == 2:
-            if not cards[8] in exposed:
                 exposed.append(cards[8])
         elif state > 2:
             exposed = []
@@ -266,7 +259,6 @@ def mouseclick(pos):
             if not cards[9] in exposed:
                 exposed.append(cards[9])
         if state == 2:
-            if not cards[9] in exposed:
                 exposed.append(cards[9])
         elif state > 2:
             exposed = []
@@ -283,7 +275,6 @@ def mouseclick(pos):
             if not cards[10] in exposed:
                 exposed.append(cards[10])
         if state == 2:
-            if not cards[10] in exposed:
                 exposed.append(cards[10])
         elif state > 2:
             exposed = []
@@ -301,7 +292,6 @@ def mouseclick(pos):
             if not cards[11] in exposed:
                 exposed.append(cards[11])
         if state == 2:
-            if not cards[11] in exposed:
                 exposed.append(cards[11])
         elif state > 2:
             exposed = []
@@ -318,7 +308,6 @@ def mouseclick(pos):
             if not cards[12] in exposed:
                 exposed.append(cards[12])
         if state == 2:
-            if not cards[12] in exposed:
                 exposed.append(cards[12])
         elif state > 2:
             exposed = []
@@ -335,7 +324,6 @@ def mouseclick(pos):
             if not cards[13] in exposed:
                 exposed.append(cards[13])
         if state == 2:
-            if not cards[13] in exposed:
                 exposed.append(cards[13])
         elif state > 2:
             exposed = []
@@ -352,7 +340,6 @@ def mouseclick(pos):
             if not cards[14] in exposed:
                 exposed.append(cards[14])
         if state == 2:
-            if not cards[14] in exposed:
                 exposed.append(cards[14])
         elif state > 2:
             exposed = []
@@ -369,7 +356,6 @@ def mouseclick(pos):
             if not cards[15] in exposed:
                 exposed.append(cards[15])
         if state == 2:
-            if not cards[15] in exposed:
                 exposed.append(cards[15])
         elif state > 2:
             exposed = []
