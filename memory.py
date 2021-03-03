@@ -70,6 +70,9 @@ random.shuffle(cards)
 exposed = []
 
 state = 0 
+
+
+
 #exposed.extend(list2_numbers)
 
 print exposed
@@ -94,13 +97,10 @@ def mouseclick(pos):
         
     print state
     
-    for number in exposed:
-        if number in exposed:
-            number = True
-        elif not number in exposed:
-            number = False
-            
-            print number
+    #for number in cards:
+        #if cards[0] == number:
+            #CARD1_WIDTH = 0
+    
             
     if pos[0] < CARD_WIDTH:
         CARD1_WIDTH = 0
@@ -113,10 +113,11 @@ def mouseclick(pos):
                 #print "is not in exposed"
                 exposed.append(cards[0])
         elif state == 2:
-            if not cards[0] in exposed:
                 exposed.append(cards[0])
         elif state > 2:
             exposed = []
+            exposed.append(cards[0])
+            state = 1
             print "ELSE"
             
             
@@ -129,10 +130,11 @@ def mouseclick(pos):
             if not cards[1] in exposed:
                 exposed.append(cards[1])
         if state == 2:
-            if not cards[1] in exposed:
                 exposed.append(cards[1])                
         elif state > 2:
             exposed = []
+            exposed.append(cards[1])
+            state = 1
             print "ELSE"
         
         print exposed 
@@ -143,11 +145,13 @@ def mouseclick(pos):
         if state == 1:
             if not cards[2] in exposed:
                 exposed.append(cards[2])
-        if state == 1:
+        if state == 2:
             if not cards[2] in exposed:
                 exposed.append(cards[2])
         elif state > 2:
             exposed = []
+            exposed.append(cards[2])
+            state = 1
             print "ELSE"
             
         print exposed
@@ -163,6 +167,8 @@ def mouseclick(pos):
                 exposed.append(cards[3])                
         elif state > 2:
             exposed = []
+            exposed.append(cards[3])
+            state = 1
             print "ELSE"
             
         print exposed
@@ -178,6 +184,8 @@ def mouseclick(pos):
                 exposed.append(cards[4])                
         elif state > 2:
             exposed = []
+            exposed.append(cards[4])
+            state = 1
             print "ELSE"
             
         print exposed
@@ -193,6 +201,8 @@ def mouseclick(pos):
                 exposed.append(cards[5])                
         elif state > 2:
             exposed = []
+            exposed.append(cards[5])
+            state = 1
             print "ELSE"
             
         print exposed
@@ -208,6 +218,8 @@ def mouseclick(pos):
                 exposed.append(cards[6])                
         elif state > 2:
             exposed = []
+            exposed.append(cards[6])
+            state = 1
             print "ELSE"
             
         print exposed
@@ -223,6 +235,8 @@ def mouseclick(pos):
                 exposed.append(cards[7])                
         elif state > 2:
             exposed = []
+            exposed.append(cards[7])
+            state = 1
             print "ELSE"
             
         print exposed
@@ -230,11 +244,16 @@ def mouseclick(pos):
     elif (pos[0] > 400) and (pos[0] < 450):
         CARD9_WIDTH = 0
         CARD9_WIDTH_2 = 0
-        if len(exposed) == 0 or 1:
+        if state == 1:
             if not cards[8] in exposed:
                 exposed.append(cards[8])
-        elif len(exposed) == 2:
+        if state == 2:
+            if not cards[8] in exposed:
+                exposed.append(cards[8])
+        elif state > 2:
             exposed = []
+            exposed.append(cards[8])
+            state = 1
             print "ELSE"
             
             
@@ -243,11 +262,16 @@ def mouseclick(pos):
     elif (pos[0] > 450) and (pos[0] < 500):
         CARD10_WIDTH = 0
         CARD10_WIDTH_2 = 0
-        if len(exposed) == 0 or 1:
+        if state == 1:
             if not cards[9] in exposed:
                 exposed.append(cards[9])
-        elif len(exposed) == 2:
+        if state == 2:
+            if not cards[9] in exposed:
+                exposed.append(cards[9])
+        elif state > 2:
             exposed = []
+            exposed.append(cards[9])
+            state = 1
             print "ELSE"
             
         print exposed
@@ -255,46 +279,68 @@ def mouseclick(pos):
     elif (pos[0] > 500) and (pos[0] < 550):
         CARD11_WIDTH = 0
         CARD11_WIDTH_2 = 0
-        if len(exposed) == 0 or 1:
+        if state == 1:
             if not cards[10] in exposed:
                 exposed.append(cards[10])
-        elif len(exposed) == 2:
+        if state == 2:
+            if not cards[10] in exposed:
+                exposed.append(cards[10])
+        elif state > 2:
             exposed = []
-            
+            exposed.append(cards[10])
+            state = 1
             print "ELSE"
+           
             
         print exposed
         
     elif (pos[0] > 550) and (pos[0] < 600):
         CARD12_WIDTH = 0
         CARD12_WIDTH_2 = 0
-        if len(exposed) == 0 or 1:
+        if state == 1:
             if not cards[11] in exposed:
                 exposed.append(cards[11])
-        elif len(exposed) == 2:
+        if state == 2:
+            if not cards[11] in exposed:
+                exposed.append(cards[11])
+        elif state > 2:
             exposed = []
+            exposed.append(cards[11])
+            state = 1
             print "ELSE"
+            
         print exposed
         
     elif (pos[0] > 600) and (pos[0] < 650):
         CARD13_WIDTH = 0
         CARD13_WIDTH_2 = 0
-        if len(exposed) == 0 or 1:
+        if state == 1:
             if not cards[12] in exposed:
                 exposed.append(cards[12])
-        elif len(exposed) == 2:
+        if state == 2:
+            if not cards[12] in exposed:
+                exposed.append(cards[12])
+        elif state > 2:
             exposed = []
+            exposed.append(cards[12])
+            state = 1
             print "ELSE"
+            
         print exposed
         
     elif (pos[0] > 650) and (pos[0] < 700):
         CARD14_WIDTH = 0
         CARD14_WIDTH_2 = 0
-        if len(exposed) == 0 or 1:
+        if state == 1:
             if not cards[13] in exposed:
                 exposed.append(cards[13])
-        elif len(exposed) == 2:
+        if state == 2:
+            if not cards[13] in exposed:
+                exposed.append(cards[13])
+        elif state > 2:
             exposed = []
+            exposed.append(cards[13])
+            state = 1
             print "ELSE"
             
         print exposed
@@ -302,11 +348,16 @@ def mouseclick(pos):
     elif (pos[0] > 700) and (pos[0] < 750):
         CARD15_WIDTH = 0
         CARD15_WIDTH_2 = 0
-        if len(exposed) == 0 or 1:
+        if state == 1:
             if not cards[14] in exposed:
                 exposed.append(cards[14])
-        elif len(exposed) == 2:
+        if state == 2:
+            if not cards[14] in exposed:
+                exposed.append(cards[14])
+        elif state > 2:
             exposed = []
+            exposed.append(cards[14])
+            state = 1
             print "ELSE"
             
         print exposed
@@ -314,11 +365,16 @@ def mouseclick(pos):
     elif (pos[0] > 750) and (pos[0] < 800):
         CARD16_WIDTH = 0
         CARD16_WIDTH_2 = 0
-        if len(exposed) == 0 or 1:
+        if state == 1:
             if not cards[15] in exposed:
                 exposed.append(cards[15])
-        elif len(exposed) == 2:
+        if state == 2:
+            if not cards[15] in exposed:
+                exposed.append(cards[15])
+        elif state > 2:
             exposed = []
+            exposed.append(cards[15])
+            state = 1
             print "ELSE"
             
         print exposed
