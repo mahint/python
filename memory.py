@@ -114,7 +114,15 @@ def mouseclick(pos):
                 exposed.append(cards[0])
         elif state == 2:
                 exposed.append(cards[0])
+                for number in exposed:
+                    if number in exposed in list1_numbers and list2_numbers:
+                        exposed = [122333333, 23333]
+                        exposed != []
         elif state > 2:
+#            for number in exposed:
+#                if number in exposed in list1_numbers and list2_numbers:
+#                    exposed = [122333333, 23333]
+#                    exposed != []
             exposed = []
             exposed.append(cards[0])
             state = 1
