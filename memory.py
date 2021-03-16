@@ -114,10 +114,6 @@ def mouseclick(pos):
                 exposed.append(cards[0])
         elif state == 2:
                 exposed.append(cards[0])
-                for number in exposed:
-                    if number in exposed in list1_numbers and list2_numbers:
-                        exposed = [122333333, 23333]
-                        exposed != []
         elif state > 2:
 #            for number in exposed:
 #                if number in exposed in list1_numbers and list2_numbers:
@@ -127,6 +123,8 @@ def mouseclick(pos):
             exposed.append(cards[0])
             state = 1
             print "ELSE"
+            if cards[0] in exposed:
+                CARD1_WIDTH = 50
             
             
         print exposed 
@@ -144,6 +142,9 @@ def mouseclick(pos):
             exposed.append(cards[1])
             state = 1
             print "ELSE"
+            if cards[1] in exposed:
+                CARD2_WIDTH = 50
+                CARD2_WIDTH_2 = CARD_WIDTH*2
         
         print exposed 
      
@@ -160,6 +161,10 @@ def mouseclick(pos):
             exposed.append(cards[2])
             state = 1
             print "ELSE"
+            if cards[1] in exposed:
+                CARD3_WIDTH = CARD_WIDTH*2
+                CARD3_WIDTH_2 = CARD_WIDTH*3            
+   
             
         print exposed
         
@@ -176,6 +181,8 @@ def mouseclick(pos):
             exposed.append(cards[3])
             state = 1
             print "ELSE"
+            CARD4_WIDTH = CARD_WIDTH*3	
+            CARD4_WIDTH_2 = CARD_WIDTH*4
             
         print exposed
         
@@ -192,6 +199,8 @@ def mouseclick(pos):
             exposed.append(cards[4])
             state = 1
             print "ELSE"
+            CARD5_WIDTH = CARD_WIDTH*4
+            CARD5_WIDTH_2 = CARD_WIDTH*5
             
         print exposed
        
@@ -208,6 +217,8 @@ def mouseclick(pos):
             exposed.append(cards[5])
             state = 1
             print "ELSE"
+            CARD6_WIDTH = CARD_WIDTH*5
+            CARD6_WIDTH_2 = CARD_WIDTH*6
             
         print exposed
         
@@ -224,6 +235,8 @@ def mouseclick(pos):
             exposed.append(cards[6])
             state = 1
             print "ELSE"
+            CARD7_WIDTH = CARD_WIDTH*6
+            CARD7_WIDTH_2 = CARD_WIDTH*7
             
         print exposed
      
@@ -240,6 +253,8 @@ def mouseclick(pos):
             exposed.append(cards[7])
             state = 1
             print "ELSE"
+            CARD8_WIDTH = CARD_WIDTH*7
+            CARD8_WIDTH_2 = CARD_WIDTH*8
             
         print exposed
         
