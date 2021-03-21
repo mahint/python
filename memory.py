@@ -92,7 +92,7 @@ def mouseclick(pos):
         state = 2
     elif state == 2:
         state = 3
-    elif state == 3:
+    elif state == 3:       
         state = 1
         
     print state
@@ -113,18 +113,78 @@ def mouseclick(pos):
                 #print "is not in exposed"
                 exposed.append(cards[0])
         elif state == 2:
-                exposed.append(cards[0])
-        elif state > 2:
+            #if cards[0] in exposed:
+                #CARD1_WIDTH = 50
+            exposed.append(cards[0])
+            #if cards[0] in exposed:
+                #CARD1_WIDTH = 50
+#            if cards[1] in exposed:
+#                CARD2_WIDTH = CARD2_WIDTH = 50
+#                CARD2_WIDTH_2 = CARD_WIDTH*2
+        elif state == 3:
 #            for number in exposed:
 #                if number in exposed in list1_numbers and list2_numbers:
 #                    exposed = [122333333, 23333]
-#                    exposed != []
+#						exposed != []
+
+
+            if cards[1] in exposed:
+                CARD2_WIDTH = 50
+                CARD2_WIDTH_2 = CARD_WIDTH*2
+            if cards[2] in exposed:
+                CARD3_WIDTH = CARD_WIDTH*2
+                CARD3_WIDTH_2 = CARD_WIDTH*3     
+            if cards[3] in exposed:
+                CARD4_WIDTH = CARD_WIDTH*3	
+                CARD4_WIDTH_2 = CARD_WIDTH*4
+            if cards[4] in exposed:
+                CARD5_WIDTH = CARD_WIDTH*4
+                CARD5_WIDTH_2 = CARD_WIDTH*5
+            if cards[5] in exposed:
+                CARD6_WIDTH = CARD_WIDTH*5
+                CARD6_WIDTH_2 = CARD_WIDTH*6
+            if cards[6] in exposed:
+                CARD7_WIDTH = CARD_WIDTH*6
+                CARD7_WIDTH_2 = CARD_WIDTH*7
+            if cards[7] in exposed:
+                CARD8_WIDTH = CARD_WIDTH*7
+                CARD8_WIDTH_2 = CARD_WIDTH*8
+            if cards[8] in exposed:
+                CARD9_WIDTH = CARD_WIDTH*8
+                CARD9_WIDTH_2 = CARD_WIDTH*9
+            if cards[9] in exposed:
+                CARD10_WIDTH = CARD_WIDTH*9
+                CARD10_WIDTH_2 = CARD_WIDTH*10
+            if cards[10] in exposed:
+                CARD11_WIDTH = CARD_WIDTH*10
+                CARD11_WIDTH_2 = CARD_WIDTH*11
+            if cards[11] in exposed:
+                CARD12_WIDTH = CARD_WIDTH*11
+                CARD12_WIDTH_2 = CARD_WIDTH*12
+            if cards[12] in exposed:
+                CARD13_WIDTH = CARD_WIDTH*12
+                CARD13_WIDTH_2 = CARD_WIDTH*13
+            if cards[13] in exposed:
+                CARD14_WIDTH = CARD_WIDTH*13
+                CARD14_WIDTH_2 = CARD_WIDTH*14
+            if cards[14] in exposed:
+                CARD15_WIDTH = CARD_WIDTH*14
+                CARD15_WIDTH_2 = CARD_WIDTH*15
+            if cards[15] in exposed:
+                CARD16_WIDTH = CARD_WIDTH*15
+                CARD16_WIDTH_2 = CARD_WIDTH*16
+                
+                    
             exposed = []
             exposed.append(cards[0])
             state = 1
             print "ELSE"
-            if cards[0] in exposed:
-                CARD1_WIDTH = 50
+#            if cards[0] in exposed:
+#                CARD1_WIDTH = 50
+#            if cards[1] in exposed:
+#                CARD2_WIDTH = CARD2_WIDTH = 50
+#                CARD2_WIDTH_2 = CARD_WIDTH*2
+                
             
             
         print exposed 
@@ -137,14 +197,58 @@ def mouseclick(pos):
                 exposed.append(cards[1])
         if state == 2:
                 exposed.append(cards[1])                
-        elif state > 2:
+        elif state == 3:
+            
+            if cards[0] in exposed:
+                CARD1_WIDTH = 50
+            if cards[2] in exposed:
+                CARD3_WIDTH = CARD_WIDTH*2
+                CARD3_WIDTH_2 = CARD_WIDTH*3     
+            if cards[3] in exposed:
+                CARD4_WIDTH = CARD_WIDTH*3	
+                CARD4_WIDTH_2 = CARD_WIDTH*4
+            if cards[4] in exposed:
+                CARD5_WIDTH = CARD_WIDTH*4
+                CARD5_WIDTH_2 = CARD_WIDTH*5
+            if cards[5] in exposed:
+                CARD6_WIDTH = CARD_WIDTH*5
+                CARD6_WIDTH_2 = CARD_WIDTH*6
+            if cards[6] in exposed:
+                CARD7_WIDTH = CARD_WIDTH*6
+                CARD7_WIDTH_2 = CARD_WIDTH*7
+            if cards[7] in exposed:
+                CARD8_WIDTH = CARD_WIDTH*7
+                CARD8_WIDTH_2 = CARD_WIDTH*8
+            if cards[8] in exposed:
+                CARD9_WIDTH = CARD_WIDTH*8
+                CARD9_WIDTH_2 = CARD_WIDTH*9
+            if cards[9] in exposed:
+                CARD10_WIDTH = CARD_WIDTH*9
+                CARD10_WIDTH_2 = CARD_WIDTH*10
+            if cards[10] in exposed:
+                CARD11_WIDTH = CARD_WIDTH*10
+                CARD11_WIDTH_2 = CARD_WIDTH*11
+            if cards[11] in exposed:
+                CARD12_WIDTH = CARD_WIDTH*11
+                CARD12_WIDTH_2 = CARD_WIDTH*12
+            if cards[12] in exposed:
+                CARD13_WIDTH = CARD_WIDTH*12
+                CARD13_WIDTH_2 = CARD_WIDTH*13
+            if cards[13] in exposed:
+                CARD14_WIDTH = CARD_WIDTH*13
+                CARD14_WIDTH_2 = CARD_WIDTH*14
+            if cards[14] in exposed:
+                CARD15_WIDTH = CARD_WIDTH*14
+                CARD15_WIDTH_2 = CARD_WIDTH*15
+            if cards[15] in exposed:
+                CARD16_WIDTH = CARD_WIDTH*15
+                CARD16_WIDTH_2 = CARD_WIDTH*16
+                
+                
             exposed = []
             exposed.append(cards[1])
             state = 1
             print "ELSE"
-            if cards[1] in exposed:
-                CARD2_WIDTH = 50
-                CARD2_WIDTH_2 = CARD_WIDTH*2
         
         print exposed 
      
@@ -157,13 +261,58 @@ def mouseclick(pos):
         if state == 2:
                 exposed.append(cards[2])
         elif state > 2:
+            
+            
+            if cards[0] in exposed:
+                CARD1_WIDTH = 50
+            if cards[1] in exposed:
+                CARD2_WIDTH = 50
+                CARD2_WIDTH_2 = CARD_WIDTH*2     
+            if cards[3] in exposed:
+                CARD4_WIDTH = CARD_WIDTH*3	
+                CARD4_WIDTH_2 = CARD_WIDTH*4
+            if cards[4] in exposed:
+                CARD5_WIDTH = CARD_WIDTH*4
+                CARD5_WIDTH_2 = CARD_WIDTH*5
+            if cards[5] in exposed:
+                CARD6_WIDTH = CARD_WIDTH*5
+                CARD6_WIDTH_2 = CARD_WIDTH*6
+            if cards[6] in exposed:
+                CARD7_WIDTH = CARD_WIDTH*6
+                CARD7_WIDTH_2 = CARD_WIDTH*7
+            if cards[7] in exposed:
+                CARD8_WIDTH = CARD_WIDTH*7
+                CARD8_WIDTH_2 = CARD_WIDTH*8
+            if cards[8] in exposed:
+                CARD9_WIDTH = CARD_WIDTH*8
+                CARD9_WIDTH_2 = CARD_WIDTH*9
+            if cards[9] in exposed:
+                CARD10_WIDTH = CARD_WIDTH*9
+                CARD10_WIDTH_2 = CARD_WIDTH*10
+            if cards[10] in exposed:
+                CARD11_WIDTH = CARD_WIDTH*10
+                CARD11_WIDTH_2 = CARD_WIDTH*11
+            if cards[11] in exposed:
+                CARD12_WIDTH = CARD_WIDTH*11
+                CARD12_WIDTH_2 = CARD_WIDTH*12
+            if cards[12] in exposed:
+                CARD13_WIDTH = CARD_WIDTH*12
+                CARD13_WIDTH_2 = CARD_WIDTH*13
+            if cards[13] in exposed:
+                CARD14_WIDTH = CARD_WIDTH*13
+                CARD14_WIDTH_2 = CARD_WIDTH*14
+            if cards[14] in exposed:
+                CARD15_WIDTH = CARD_WIDTH*14
+                CARD15_WIDTH_2 = CARD_WIDTH*15
+            if cards[15] in exposed:
+                CARD16_WIDTH = CARD_WIDTH*15
+                CARD16_WIDTH_2 = CARD_WIDTH*16            
+            
+            
             exposed = []
             exposed.append(cards[2])
             state = 1
-            print "ELSE"
-            if cards[1] in exposed:
-                CARD3_WIDTH = CARD_WIDTH*2
-                CARD3_WIDTH_2 = CARD_WIDTH*3            
+            print "ELSE"      
    
             
         print exposed
@@ -177,12 +326,58 @@ def mouseclick(pos):
         if state == 2:
                 exposed.append(cards[3])                
         elif state > 2:
+            
+            
+            if cards[0] in exposed:
+                CARD1_WIDTH = 50
+            if cards[1] in exposed:
+                CARD2_WIDTH = 50
+                CARD2_WIDTH_2 = CARD_WIDTH*2     
+            if cards[2] in exposed:
+                CARD3_WIDTH = CARD_WIDTH*2	
+                CARD3_WIDTH_2 = CARD_WIDTH*3
+            if cards[4] in exposed:
+                CARD5_WIDTH = CARD_WIDTH*4
+                CARD5_WIDTH_2 = CARD_WIDTH*5
+            if cards[5] in exposed:
+                CARD6_WIDTH = CARD_WIDTH*5
+                CARD6_WIDTH_2 = CARD_WIDTH*6
+            if cards[6] in exposed:
+                CARD7_WIDTH = CARD_WIDTH*6
+                CARD7_WIDTH_2 = CARD_WIDTH*7
+            if cards[7] in exposed:
+                CARD8_WIDTH = CARD_WIDTH*7
+                CARD8_WIDTH_2 = CARD_WIDTH*8
+            if cards[8] in exposed:
+                CARD9_WIDTH = CARD_WIDTH*8
+                CARD9_WIDTH_2 = CARD_WIDTH*9
+            if cards[9] in exposed:
+                CARD10_WIDTH = CARD_WIDTH*9
+                CARD10_WIDTH_2 = CARD_WIDTH*10
+            if cards[10] in exposed:
+                CARD11_WIDTH = CARD_WIDTH*10
+                CARD11_WIDTH_2 = CARD_WIDTH*11
+            if cards[11] in exposed:
+                CARD12_WIDTH = CARD_WIDTH*11
+                CARD12_WIDTH_2 = CARD_WIDTH*12
+            if cards[12] in exposed:
+                CARD13_WIDTH = CARD_WIDTH*12
+                CARD13_WIDTH_2 = CARD_WIDTH*13
+            if cards[13] in exposed:
+                CARD14_WIDTH = CARD_WIDTH*13
+                CARD14_WIDTH_2 = CARD_WIDTH*14
+            if cards[14] in exposed:
+                CARD15_WIDTH = CARD_WIDTH*14
+                CARD15_WIDTH_2 = CARD_WIDTH*15
+            if cards[15] in exposed:
+                CARD16_WIDTH = CARD_WIDTH*15
+                CARD16_WIDTH_2 = CARD_WIDTH*16             
+            
+            
             exposed = []
             exposed.append(cards[3])
             state = 1
             print "ELSE"
-            CARD4_WIDTH = CARD_WIDTH*3	
-            CARD4_WIDTH_2 = CARD_WIDTH*4
             
         print exposed
         
@@ -195,12 +390,58 @@ def mouseclick(pos):
         if state == 2:
                 exposed.append(cards[4])                
         elif state > 2:
+            
+                       
+            if cards[0] in exposed:
+                CARD1_WIDTH = 50
+            if cards[1] in exposed:
+                CARD2_WIDTH = 50
+                CARD2_WIDTH_2 = CARD_WIDTH*2     
+            if cards[2] in exposed:
+                CARD3_WIDTH = CARD_WIDTH*2	
+                CARD3_WIDTH_2 = CARD_WIDTH*3
+            if cards[3] in exposed:
+                CARD4_WIDTH = CARD_WIDTH*3
+                CARD4_WIDTH_2 = CARD_WIDTH*4
+            if cards[5] in exposed:
+                CARD6_WIDTH = CARD_WIDTH*5
+                CARD6_WIDTH_2 = CARD_WIDTH*6
+            if cards[6] in exposed:
+                CARD7_WIDTH = CARD_WIDTH*6
+                CARD7_WIDTH_2 = CARD_WIDTH*7
+            if cards[7] in exposed:
+                CARD8_WIDTH = CARD_WIDTH*7
+                CARD8_WIDTH_2 = CARD_WIDTH*8
+            if cards[8] in exposed:
+                CARD9_WIDTH = CARD_WIDTH*8
+                CARD9_WIDTH_2 = CARD_WIDTH*9
+            if cards[9] in exposed:
+                CARD10_WIDTH = CARD_WIDTH*9
+                CARD10_WIDTH_2 = CARD_WIDTH*10
+            if cards[10] in exposed:
+                CARD11_WIDTH = CARD_WIDTH*10
+                CARD11_WIDTH_2 = CARD_WIDTH*11
+            if cards[11] in exposed:
+                CARD12_WIDTH = CARD_WIDTH*11
+                CARD12_WIDTH_2 = CARD_WIDTH*12
+            if cards[12] in exposed:
+                CARD13_WIDTH = CARD_WIDTH*12
+                CARD13_WIDTH_2 = CARD_WIDTH*13
+            if cards[13] in exposed:
+                CARD14_WIDTH = CARD_WIDTH*13
+                CARD14_WIDTH_2 = CARD_WIDTH*14
+            if cards[14] in exposed:
+                CARD15_WIDTH = CARD_WIDTH*14
+                CARD15_WIDTH_2 = CARD_WIDTH*15
+            if cards[15] in exposed:
+                CARD16_WIDTH = CARD_WIDTH*15
+                CARD16_WIDTH_2 = CARD_WIDTH*16
+            
+            
             exposed = []
             exposed.append(cards[4])
             state = 1
             print "ELSE"
-            CARD5_WIDTH = CARD_WIDTH*4
-            CARD5_WIDTH_2 = CARD_WIDTH*5
             
         print exposed
        
@@ -213,12 +454,58 @@ def mouseclick(pos):
         if state == 2:
                 exposed.append(cards[5])                
         elif state > 2:
+            
+            
+            if cards[0] in exposed:
+                CARD1_WIDTH = 50
+            if cards[1] in exposed:
+                CARD2_WIDTH = 50
+                CARD2_WIDTH_2 = CARD_WIDTH*2     
+            if cards[2] in exposed:
+                CARD3_WIDTH = CARD_WIDTH*2	
+                CARD3_WIDTH_2 = CARD_WIDTH*3
+            if cards[3] in exposed:
+                CARD4_WIDTH = CARD_WIDTH*3
+                CARD4_WIDTH_2 = CARD_WIDTH*4
+            if cards[4] in exposed:
+                CARD5_WIDTH = CARD_WIDTH*4
+                CARD5_WIDTH_2 = CARD_WIDTH*5
+            if cards[6] in exposed:
+                CARD7_WIDTH = CARD_WIDTH*6
+                CARD7_WIDTH_2 = CARD_WIDTH*7
+            if cards[7] in exposed:
+                CARD8_WIDTH = CARD_WIDTH*7
+                CARD8_WIDTH_2 = CARD_WIDTH*8
+            if cards[8] in exposed:
+                CARD9_WIDTH = CARD_WIDTH*8
+                CARD9_WIDTH_2 = CARD_WIDTH*9
+            if cards[9] in exposed:
+                CARD10_WIDTH = CARD_WIDTH*9
+                CARD10_WIDTH_2 = CARD_WIDTH*10
+            if cards[10] in exposed:
+                CARD11_WIDTH = CARD_WIDTH*10
+                CARD11_WIDTH_2 = CARD_WIDTH*11
+            if cards[11] in exposed:
+                CARD12_WIDTH = CARD_WIDTH*11
+                CARD12_WIDTH_2 = CARD_WIDTH*12
+            if cards[12] in exposed:
+                CARD13_WIDTH = CARD_WIDTH*12
+                CARD13_WIDTH_2 = CARD_WIDTH*13
+            if cards[13] in exposed:
+                CARD14_WIDTH = CARD_WIDTH*13
+                CARD14_WIDTH_2 = CARD_WIDTH*14
+            if cards[14] in exposed:
+                CARD15_WIDTH = CARD_WIDTH*14
+                CARD15_WIDTH_2 = CARD_WIDTH*15
+            if cards[15] in exposed:
+                CARD16_WIDTH = CARD_WIDTH*15
+                CARD16_WIDTH_2 = CARD_WIDTH*16            
+            
+            
             exposed = []
             exposed.append(cards[5])
             state = 1
             print "ELSE"
-            CARD6_WIDTH = CARD_WIDTH*5
-            CARD6_WIDTH_2 = CARD_WIDTH*6
             
         print exposed
         
@@ -231,12 +518,59 @@ def mouseclick(pos):
         if state == 2:
                 exposed.append(cards[6])                
         elif state > 2:
+            
+            
+            if cards[0] in exposed:
+                CARD1_WIDTH = 50
+            if cards[1] in exposed:
+                CARD2_WIDTH = 50
+                CARD2_WIDTH_2 = CARD_WIDTH*2     
+            if cards[2] in exposed:
+                CARD3_WIDTH = CARD_WIDTH*2	
+                CARD3_WIDTH_2 = CARD_WIDTH*3
+            if cards[3] in exposed:
+                CARD4_WIDTH = CARD_WIDTH*3
+                CARD4_WIDTH_2 = CARD_WIDTH*4
+            if cards[4] in exposed:
+                CARD5_WIDTH = CARD_WIDTH*4
+                CARD5_WIDTH_2 = CARD_WIDTH*5
+            if cards[5] in exposed:
+                CARD6_WIDTH = CARD_WIDTH*5
+                CARD6_WIDTH_2 = CARD_WIDTH*6
+            if cards[7] in exposed:
+                CARD8_WIDTH = CARD_WIDTH*7
+                CARD8_WIDTH_2 = CARD_WIDTH*8
+            if cards[8] in exposed:
+                CARD9_WIDTH = CARD_WIDTH*8
+                CARD9_WIDTH_2 = CARD_WIDTH*9
+            if cards[9] in exposed:
+                CARD10_WIDTH = CARD_WIDTH*9
+                CARD10_WIDTH_2 = CARD_WIDTH*10
+            if cards[10] in exposed:
+                CARD11_WIDTH = CARD_WIDTH*10
+                CARD11_WIDTH_2 = CARD_WIDTH*11
+            if cards[11] in exposed:
+                CARD12_WIDTH = CARD_WIDTH*11
+                CARD12_WIDTH_2 = CARD_WIDTH*12
+            if cards[12] in exposed:
+                CARD13_WIDTH = CARD_WIDTH*12
+                CARD13_WIDTH_2 = CARD_WIDTH*13
+            if cards[13] in exposed:
+                CARD14_WIDTH = CARD_WIDTH*13
+                CARD14_WIDTH_2 = CARD_WIDTH*14
+            if cards[14] in exposed:
+                CARD15_WIDTH = CARD_WIDTH*14
+                CARD15_WIDTH_2 = CARD_WIDTH*15
+            if cards[15] in exposed:
+                CARD16_WIDTH = CARD_WIDTH*15
+                CARD16_WIDTH_2 = CARD_WIDTH*16               
+            
+            
             exposed = []
             exposed.append(cards[6])
             state = 1
             print "ELSE"
-            CARD7_WIDTH = CARD_WIDTH*6
-            CARD7_WIDTH_2 = CARD_WIDTH*7
+
             
         print exposed
      
@@ -249,12 +583,58 @@ def mouseclick(pos):
         if state == 2:
                 exposed.append(cards[7])                
         elif state > 2:
+            
+            
+            if cards[0] in exposed:
+                CARD1_WIDTH = 50
+            if cards[1] in exposed:
+                CARD2_WIDTH = 50
+                CARD2_WIDTH_2 = CARD_WIDTH*2     
+            if cards[2] in exposed:
+                CARD3_WIDTH = CARD_WIDTH*2	
+                CARD3_WIDTH_2 = CARD_WIDTH*3
+            if cards[3] in exposed:
+                CARD4_WIDTH = CARD_WIDTH*3
+                CARD4_WIDTH_2 = CARD_WIDTH*4
+            if cards[4] in exposed:
+                CARD5_WIDTH = CARD_WIDTH*4
+                CARD5_WIDTH_2 = CARD_WIDTH*5
+            if cards[5] in exposed:
+                CARD6_WIDTH = CARD_WIDTH*5
+                CARD6_WIDTH_2 = CARD_WIDTH*6
+            if cards[6] in exposed:
+                CARD7_WIDTH = CARD_WIDTH*6
+                CARD7_WIDTH_2 = CARD_WIDTH*7
+            if cards[8] in exposed:
+                CARD9_WIDTH = CARD_WIDTH*8
+                CARD9_WIDTH_2 = CARD_WIDTH*9
+            if cards[9] in exposed:
+                CARD10_WIDTH = CARD_WIDTH*9
+                CARD10_WIDTH_2 = CARD_WIDTH*10
+            if cards[10] in exposed:
+                CARD11_WIDTH = CARD_WIDTH*10
+                CARD11_WIDTH_2 = CARD_WIDTH*11
+            if cards[11] in exposed:
+                CARD12_WIDTH = CARD_WIDTH*11
+                CARD12_WIDTH_2 = CARD_WIDTH*12
+            if cards[12] in exposed:
+                CARD13_WIDTH = CARD_WIDTH*12
+                CARD13_WIDTH_2 = CARD_WIDTH*13
+            if cards[13] in exposed:
+                CARD14_WIDTH = CARD_WIDTH*13
+                CARD14_WIDTH_2 = CARD_WIDTH*14
+            if cards[14] in exposed:
+                CARD15_WIDTH = CARD_WIDTH*14
+                CARD15_WIDTH_2 = CARD_WIDTH*15
+            if cards[15] in exposed:
+                CARD16_WIDTH = CARD_WIDTH*15
+                CARD16_WIDTH_2 = CARD_WIDTH*16
+            
+            
             exposed = []
             exposed.append(cards[7])
             state = 1
             print "ELSE"
-            CARD8_WIDTH = CARD_WIDTH*7
-            CARD8_WIDTH_2 = CARD_WIDTH*8
             
         print exposed
         
@@ -267,6 +647,54 @@ def mouseclick(pos):
         if state == 2:
                 exposed.append(cards[8])
         elif state > 2:
+            
+            
+            if cards[0] in exposed:
+                CARD1_WIDTH = 50
+            if cards[1] in exposed:
+                CARD2_WIDTH = 50
+                CARD2_WIDTH_2 = CARD_WIDTH*2     
+            if cards[2] in exposed:
+                CARD3_WIDTH = CARD_WIDTH*2	
+                CARD3_WIDTH_2 = CARD_WIDTH*3
+            if cards[3] in exposed:
+                CARD4_WIDTH = CARD_WIDTH*3
+                CARD4_WIDTH_2 = CARD_WIDTH*4
+            if cards[4] in exposed:
+                CARD5_WIDTH = CARD_WIDTH*4
+                CARD5_WIDTH_2 = CARD_WIDTH*5
+            if cards[5] in exposed:
+                CARD6_WIDTH = CARD_WIDTH*5
+                CARD6_WIDTH_2 = CARD_WIDTH*6
+            if cards[6] in exposed:
+                CARD7_WIDTH = CARD_WIDTH*6
+                CARD7_WIDTH_2 = CARD_WIDTH*7
+            if cards[7] in exposed:
+                CARD8_WIDTH = CARD_WIDTH*7
+                CARD8_WIDTH_2 = CARD_WIDTH*6
+            if cards[9] in exposed:
+                CARD10_WIDTH = CARD_WIDTH*9
+                CARD10_WIDTH_2 = CARD_WIDTH*10
+            if cards[10] in exposed:
+                CARD11_WIDTH = CARD_WIDTH*10
+                CARD11_WIDTH_2 = CARD_WIDTH*11
+            if cards[11] in exposed:
+                CARD12_WIDTH = CARD_WIDTH*11
+                CARD12_WIDTH_2 = CARD_WIDTH*12
+            if cards[12] in exposed:
+                CARD13_WIDTH = CARD_WIDTH*12
+                CARD13_WIDTH_2 = CARD_WIDTH*13
+            if cards[13] in exposed:
+                CARD14_WIDTH = CARD_WIDTH*13
+                CARD14_WIDTH_2 = CARD_WIDTH*14
+            if cards[14] in exposed:
+                CARD15_WIDTH = CARD_WIDTH*14
+                CARD15_WIDTH_2 = CARD_WIDTH*15
+            if cards[15] in exposed:
+                CARD16_WIDTH = CARD_WIDTH*15
+                CARD16_WIDTH_2 = CARD_WIDTH*16
+            
+            
             exposed = []
             exposed.append(cards[8])
             state = 1
@@ -284,6 +712,54 @@ def mouseclick(pos):
         if state == 2:
                 exposed.append(cards[9])
         elif state > 2:
+            
+            
+            if cards[0] in exposed:
+                CARD1_WIDTH = 50
+            if cards[1] in exposed:
+                CARD2_WIDTH = 50
+                CARD2_WIDTH_2 = CARD_WIDTH*2     
+            if cards[2] in exposed:
+                CARD3_WIDTH = CARD_WIDTH*2	
+                CARD3_WIDTH_2 = CARD_WIDTH*3
+            if cards[3] in exposed:
+                CARD4_WIDTH = CARD_WIDTH*3
+                CARD4_WIDTH_2 = CARD_WIDTH*4
+            if cards[4] in exposed:
+                CARD5_WIDTH = CARD_WIDTH*4
+                CARD5_WIDTH_2 = CARD_WIDTH*5
+            if cards[5] in exposed:
+                CARD6_WIDTH = CARD_WIDTH*5
+                CARD6_WIDTH_2 = CARD_WIDTH*6
+            if cards[6] in exposed:
+                CARD7_WIDTH = CARD_WIDTH*6
+                CARD7_WIDTH_2 = CARD_WIDTH*7
+            if cards[7] in exposed:
+                CARD8_WIDTH = CARD_WIDTH*7
+                CARD8_WIDTH_2 = CARD_WIDTH*8
+            if cards[8] in exposed:
+                CARD9_WIDTH = CARD_WIDTH*8
+                CARD9_WIDTH_2 = CARD_WIDTH*9
+            if cards[10] in exposed:
+                CARD11_WIDTH = CARD_WIDTH*10
+                CARD11_WIDTH_2 = CARD_WIDTH*11
+            if cards[11] in exposed:
+                CARD12_WIDTH = CARD_WIDTH*11
+                CARD12_WIDTH_2 = CARD_WIDTH*12
+            if cards[12] in exposed:
+                CARD13_WIDTH = CARD_WIDTH*12
+                CARD13_WIDTH_2 = CARD_WIDTH*13
+            if cards[13] in exposed:
+                CARD14_WIDTH = CARD_WIDTH*13
+                CARD14_WIDTH_2 = CARD_WIDTH*14
+            if cards[14] in exposed:
+                CARD15_WIDTH = CARD_WIDTH*14
+                CARD15_WIDTH_2 = CARD_WIDTH*15
+            if cards[15] in exposed:
+                CARD16_WIDTH = CARD_WIDTH*15
+                CARD16_WIDTH_2 = CARD_WIDTH*16
+            
+            
             exposed = []
             exposed.append(cards[9])
             state = 1
@@ -300,6 +776,54 @@ def mouseclick(pos):
         if state == 2:
                 exposed.append(cards[10])
         elif state > 2:
+            
+            
+            if cards[0] in exposed:
+                CARD1_WIDTH = 50
+            if cards[1] in exposed:
+                CARD2_WIDTH = 50
+                CARD2_WIDTH_2 = CARD_WIDTH*2     
+            if cards[2] in exposed:
+                CARD3_WIDTH = CARD_WIDTH*2	
+                CARD3_WIDTH_2 = CARD_WIDTH*3
+            if cards[3] in exposed:
+                CARD4_WIDTH = CARD_WIDTH*3
+                CARD4_WIDTH_2 = CARD_WIDTH*4
+            if cards[4] in exposed:
+                CARD5_WIDTH = CARD_WIDTH*4
+                CARD5_WIDTH_2 = CARD_WIDTH*5
+            if cards[5] in exposed:
+                CARD6_WIDTH = CARD_WIDTH*5
+                CARD6_WIDTH_2 = CARD_WIDTH*6
+            if cards[6] in exposed:
+                CARD7_WIDTH = CARD_WIDTH*6
+                CARD7_WIDTH_2 = CARD_WIDTH*7
+            if cards[7] in exposed:
+                CARD8_WIDTH = CARD_WIDTH*7
+                CARD8_WIDTH_2 = CARD_WIDTH*8
+            if cards[8] in exposed:
+                CARD9_WIDTH = CARD_WIDTH*8
+                CARD9_WIDTH_2 = CARD_WIDTH*9
+            if cards[9] in exposed:
+                CARD10_WIDTH = CARD_WIDTH*9
+                CARD10_WIDTH_2 = CARD_WIDTH*10
+            if cards[11] in exposed:
+                CARD12_WIDTH = CARD_WIDTH*11
+                CARD12_WIDTH_2 = CARD_WIDTH*12
+            if cards[12] in exposed:
+                CARD13_WIDTH = CARD_WIDTH*12
+                CARD13_WIDTH_2 = CARD_WIDTH*13
+            if cards[13] in exposed:
+                CARD14_WIDTH = CARD_WIDTH*13
+                CARD14_WIDTH_2 = CARD_WIDTH*14
+            if cards[14] in exposed:
+                CARD15_WIDTH = CARD_WIDTH*14
+                CARD15_WIDTH_2 = CARD_WIDTH*15
+            if cards[15] in exposed:
+                CARD16_WIDTH = CARD_WIDTH*15
+                CARD16_WIDTH_2 = CARD_WIDTH*16            
+            
+            
             exposed = []
             exposed.append(cards[10])
             state = 1
@@ -317,6 +841,54 @@ def mouseclick(pos):
         if state == 2:
                 exposed.append(cards[11])
         elif state > 2:
+            
+            
+            if cards[0] in exposed:
+                CARD1_WIDTH = 50
+            if cards[1] in exposed:
+                CARD2_WIDTH = 50
+                CARD2_WIDTH_2 = CARD_WIDTH*2     
+            if cards[2] in exposed:
+                CARD3_WIDTH = CARD_WIDTH*2	
+                CARD3_WIDTH_2 = CARD_WIDTH*3
+            if cards[3] in exposed:
+                CARD4_WIDTH = CARD_WIDTH*3
+                CARD4_WIDTH_2 = CARD_WIDTH*4
+            if cards[4] in exposed:
+                CARD5_WIDTH = CARD_WIDTH*4
+                CARD5_WIDTH_2 = CARD_WIDTH*5
+            if cards[5] in exposed:
+                CARD6_WIDTH = CARD_WIDTH*5
+                CARD6_WIDTH_2 = CARD_WIDTH*6
+            if cards[6] in exposed:
+                CARD7_WIDTH = CARD_WIDTH*6
+                CARD7_WIDTH_2 = CARD_WIDTH*7
+            if cards[7] in exposed:
+                CARD8_WIDTH = CARD_WIDTH*7
+                CARD8_WIDTH_2 = CARD_WIDTH*8
+            if cards[8] in exposed:
+                CARD9_WIDTH = CARD_WIDTH*8
+                CARD9_WIDTH_2 = CARD_WIDTH*9
+            if cards[9] in exposed:
+                CARD10_WIDTH = CARD_WIDTH*9
+                CARD10_WIDTH_2 = CARD_WIDTH*10
+            if cards[10] in exposed:
+                CARD11_WIDTH = CARD_WIDTH*10
+                CARD11_WIDTH_2 = CARD_WIDTH*11
+            if cards[12] in exposed:
+                CARD13_WIDTH = CARD_WIDTH*12
+                CARD13_WIDTH_2 = CARD_WIDTH*13
+            if cards[13] in exposed:
+                CARD14_WIDTH = CARD_WIDTH*13
+                CARD14_WIDTH_2 = CARD_WIDTH*14
+            if cards[14] in exposed:
+                CARD15_WIDTH = CARD_WIDTH*14
+                CARD15_WIDTH_2 = CARD_WIDTH*15
+            if cards[15] in exposed:
+                CARD16_WIDTH = CARD_WIDTH*15
+                CARD16_WIDTH_2 = CARD_WIDTH*16
+            
+            
             exposed = []
             exposed.append(cards[11])
             state = 1
@@ -333,6 +905,54 @@ def mouseclick(pos):
         if state == 2:
                 exposed.append(cards[12])
         elif state > 2:
+            
+            
+            if cards[0] in exposed:
+                CARD1_WIDTH = 50
+            if cards[1] in exposed:
+                CARD2_WIDTH = 50
+                CARD2_WIDTH_2 = CARD_WIDTH*2     
+            if cards[2] in exposed:
+                CARD3_WIDTH = CARD_WIDTH*2	
+                CARD3_WIDTH_2 = CARD_WIDTH*3
+            if cards[3] in exposed:
+                CARD4_WIDTH = CARD_WIDTH*3
+                CARD4_WIDTH_2 = CARD_WIDTH*4
+            if cards[4] in exposed:
+                CARD5_WIDTH = CARD_WIDTH*4
+                CARD5_WIDTH_2 = CARD_WIDTH*5
+            if cards[5] in exposed:
+                CARD6_WIDTH = CARD_WIDTH*5
+                CARD6_WIDTH_2 = CARD_WIDTH*6
+            if cards[6] in exposed:
+                CARD7_WIDTH = CARD_WIDTH*6
+                CARD7_WIDTH_2 = CARD_WIDTH*7
+            if cards[7] in exposed:
+                CARD8_WIDTH = CARD_WIDTH*7
+                CARD8_WIDTH_2 = CARD_WIDTH*8
+            if cards[8] in exposed:
+                CARD9_WIDTH = CARD_WIDTH*8
+                CARD9_WIDTH_2 = CARD_WIDTH*9
+            if cards[9] in exposed:
+                CARD10_WIDTH = CARD_WIDTH*9
+                CARD10_WIDTH_2 = CARD_WIDTH*10
+            if cards[10] in exposed:
+                CARD11_WIDTH = CARD_WIDTH*10
+                CARD11_WIDTH_2 = CARD_WIDTH*11
+            if cards[11] in exposed:
+                CARD12_WIDTH = CARD_WIDTH*11
+                CARD12_WIDTH_2 = CARD_WIDTH*12
+            if cards[13] in exposed:
+                CARD14_WIDTH = CARD_WIDTH*13
+                CARD14_WIDTH_2 = CARD_WIDTH*14
+            if cards[14] in exposed:
+                CARD15_WIDTH = CARD_WIDTH*14
+                CARD15_WIDTH_2 = CARD_WIDTH*15
+            if cards[15] in exposed:
+                CARD16_WIDTH = CARD_WIDTH*15
+                CARD16_WIDTH_2 = CARD_WIDTH*16
+            
+            
             exposed = []
             exposed.append(cards[12])
             state = 1
@@ -349,6 +969,54 @@ def mouseclick(pos):
         if state == 2:
                 exposed.append(cards[13])
         elif state > 2:
+            
+            
+            if cards[0] in exposed:
+                CARD1_WIDTH = 50
+            if cards[1] in exposed:
+                CARD2_WIDTH = 50
+                CARD2_WIDTH_2 = CARD_WIDTH*2     
+            if cards[2] in exposed:
+                CARD3_WIDTH = CARD_WIDTH*2	
+                CARD3_WIDTH_2 = CARD_WIDTH*3
+            if cards[3] in exposed:
+                CARD4_WIDTH = CARD_WIDTH*3
+                CARD4_WIDTH_2 = CARD_WIDTH*4
+            if cards[4] in exposed:
+                CARD5_WIDTH = CARD_WIDTH*4
+                CARD5_WIDTH_2 = CARD_WIDTH*5
+            if cards[5] in exposed:
+                CARD6_WIDTH = CARD_WIDTH*5
+                CARD6_WIDTH_2 = CARD_WIDTH*6
+            if cards[6] in exposed:
+                CARD7_WIDTH = CARD_WIDTH*6
+                CARD7_WIDTH_2 = CARD_WIDTH*7
+            if cards[7] in exposed:
+                CARD8_WIDTH = CARD_WIDTH*7
+                CARD8_WIDTH_2 = CARD_WIDTH*8
+            if cards[8] in exposed:
+                CARD9_WIDTH = CARD_WIDTH*8
+                CARD9_WIDTH_2 = CARD_WIDTH*9
+            if cards[9] in exposed:
+                CARD10_WIDTH = CARD_WIDTH*9
+                CARD10_WIDTH_2 = CARD_WIDTH*10
+            if cards[10] in exposed:
+                CARD11_WIDTH = CARD_WIDTH*10
+                CARD11_WIDTH_2 = CARD_WIDTH*11
+            if cards[11] in exposed:
+                CARD12_WIDTH = CARD_WIDTH*11
+                CARD12_WIDTH_2 = CARD_WIDTH*12
+            if cards[12] in exposed:
+                CARD13_WIDTH = CARD_WIDTH*12
+                CARD13_WIDTH_2 = CARD_WIDTH*13
+            if cards[14] in exposed:
+                CARD15_WIDTH = CARD_WIDTH*14
+                CARD15_WIDTH_2 = CARD_WIDTH*15
+            if cards[15] in exposed:
+                CARD16_WIDTH = CARD_WIDTH*15
+                CARD16_WIDTH_2 = CARD_WIDTH*16
+            
+            
             exposed = []
             exposed.append(cards[13])
             state = 1
@@ -365,6 +1033,54 @@ def mouseclick(pos):
         if state == 2:
                 exposed.append(cards[14])
         elif state > 2:
+            
+            
+            if cards[0] in exposed:
+                CARD1_WIDTH = 50
+            if cards[1] in exposed:
+                CARD2_WIDTH = 50
+                CARD2_WIDTH_2 = CARD_WIDTH*2     
+            if cards[2] in exposed:
+                CARD3_WIDTH = CARD_WIDTH*2	
+                CARD3_WIDTH_2 = CARD_WIDTH*3
+            if cards[3] in exposed:
+                CARD4_WIDTH = CARD_WIDTH*3
+                CARD4_WIDTH_2 = CARD_WIDTH*4
+            if cards[4] in exposed:
+                CARD5_WIDTH = CARD_WIDTH*4
+                CARD5_WIDTH_2 = CARD_WIDTH*5
+            if cards[5] in exposed:
+                CARD6_WIDTH = CARD_WIDTH*5
+                CARD6_WIDTH_2 = CARD_WIDTH*6
+            if cards[6] in exposed:
+                CARD7_WIDTH = CARD_WIDTH*6
+                CARD7_WIDTH_2 = CARD_WIDTH*7
+            if cards[7] in exposed:
+                CARD8_WIDTH = CARD_WIDTH*7
+                CARD8_WIDTH_2 = CARD_WIDTH*8
+            if cards[8] in exposed:
+                CARD9_WIDTH = CARD_WIDTH*8
+                CARD9_WIDTH_2 = CARD_WIDTH*9
+            if cards[9] in exposed:
+                CARD10_WIDTH = CARD_WIDTH*9
+                CARD10_WIDTH_2 = CARD_WIDTH*10
+            if cards[10] in exposed:
+                CARD11_WIDTH = CARD_WIDTH*10
+                CARD11_WIDTH_2 = CARD_WIDTH*11
+            if cards[11] in exposed:
+                CARD12_WIDTH = CARD_WIDTH*11
+                CARD12_WIDTH_2 = CARD_WIDTH*12
+            if cards[12] in exposed:
+                CARD13_WIDTH = CARD_WIDTH*12
+                CARD13_WIDTH_2 = CARD_WIDTH*13
+            if cards[13] in exposed:
+                CARD14_WIDTH = CARD_WIDTH*13
+                CARD14_WIDTH_2 = CARD_WIDTH*14
+            if cards[15] in exposed:
+                CARD16_WIDTH = CARD_WIDTH*15
+                CARD16_WIDTH_2 = CARD_WIDTH*16
+            
+            
             exposed = []
             exposed.append(cards[14])
             state = 1
@@ -381,6 +1097,54 @@ def mouseclick(pos):
         if state == 2:
                 exposed.append(cards[15])
         elif state > 2:
+            
+            
+            if cards[0] in exposed:
+                CARD1_WIDTH = 50
+            if cards[1] in exposed:
+                CARD2_WIDTH = 50
+                CARD2_WIDTH_2 = CARD_WIDTH*2     
+            if cards[2] in exposed:
+                CARD3_WIDTH = CARD_WIDTH*2	
+                CARD3_WIDTH_2 = CARD_WIDTH*3
+            if cards[3] in exposed:
+                CARD4_WIDTH = CARD_WIDTH*3
+                CARD4_WIDTH_2 = CARD_WIDTH*4
+            if cards[4] in exposed:
+                CARD5_WIDTH = CARD_WIDTH*4
+                CARD5_WIDTH_2 = CARD_WIDTH*5
+            if cards[5] in exposed:
+                CARD6_WIDTH = CARD_WIDTH*5
+                CARD6_WIDTH_2 = CARD_WIDTH*6
+            if cards[6] in exposed:
+                CARD7_WIDTH = CARD_WIDTH*6
+                CARD7_WIDTH_2 = CARD_WIDTH*7
+            if cards[7] in exposed:
+                CARD8_WIDTH = CARD_WIDTH*7
+                CARD8_WIDTH_2 = CARD_WIDTH*8
+            if cards[8] in exposed:
+                CARD9_WIDTH = CARD_WIDTH*8
+                CARD9_WIDTH_2 = CARD_WIDTH*9
+            if cards[9] in exposed:
+                CARD10_WIDTH = CARD_WIDTH*9
+                CARD10_WIDTH_2 = CARD_WIDTH*10
+            if cards[10] in exposed:
+                CARD11_WIDTH = CARD_WIDTH*10
+                CARD11_WIDTH_2 = CARD_WIDTH*11
+            if cards[11] in exposed:
+                CARD12_WIDTH = CARD_WIDTH*11
+                CARD12_WIDTH_2 = CARD_WIDTH*12
+            if cards[12] in exposed:
+                CARD13_WIDTH = CARD_WIDTH*12
+                CARD13_WIDTH_2 = CARD_WIDTH*13
+            if cards[13] in exposed:
+                CARD14_WIDTH = CARD_WIDTH*13
+                CARD14_WIDTH_2 = CARD_WIDTH*14
+            if cards[14] in exposed:
+                CARD15_WIDTH = CARD_WIDTH*14
+                CARD15_WIDTH_2 = CARD_WIDTH*15
+            
+            
             exposed = []
             exposed.append(cards[15])
             state = 1
