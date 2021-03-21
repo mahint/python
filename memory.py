@@ -69,7 +69,9 @@ random.shuffle(cards)
 
 exposed = []
 
-state = 0 
+state = 0
+
+turns = 0
 
 
 
@@ -85,7 +87,7 @@ def new_game():
 # define event handlers
 def mouseclick(pos):
     # add game state logic here
-    global CARD1_WIDTH, CARD2_WIDTH, CARD2_WIDTH_2, CARD3_WIDTH, CARD3_WIDTH_2, CARD4_WIDTH, CARD4_WIDTH_2, CARD5_WIDTH, CARD5_WIDTH_2, CARD6_WIDTH, CARD6_WIDTH_2, CARD7_WIDTH, CARD7_WIDTH_2, CARD8_WIDTH, CARD8_WIDTH_2, CARD9_WIDTH, CARD9_WIDTH_2, CARD10_WIDTH, CARD10_WIDTH_2, CARD11_WIDTH, CARD11_WIDTH_2, CARD12_WIDTH, CARD12_WIDTH_2, CARD13_WIDTH, CARD13_WIDTH_2, CARD14_WIDTH, CARD14_WIDTH_2, CARD15_WIDTH, CARD15_WIDTH_2, CARD16_WIDTH, CARD16_WIDTH_2, exposed, state
+    global CARD1_WIDTH, CARD2_WIDTH, CARD2_WIDTH_2, CARD3_WIDTH, CARD3_WIDTH_2, CARD4_WIDTH, CARD4_WIDTH_2, CARD5_WIDTH, CARD5_WIDTH_2, CARD6_WIDTH, CARD6_WIDTH_2, CARD7_WIDTH, CARD7_WIDTH_2, CARD8_WIDTH, CARD8_WIDTH_2, CARD9_WIDTH, CARD9_WIDTH_2, CARD10_WIDTH, CARD10_WIDTH_2, CARD11_WIDTH, CARD11_WIDTH_2, CARD12_WIDTH, CARD12_WIDTH_2, CARD13_WIDTH, CARD13_WIDTH_2, CARD14_WIDTH, CARD14_WIDTH_2, CARD15_WIDTH, CARD15_WIDTH_2, CARD16_WIDTH, CARD16_WIDTH_2, exposed, state, turns
     if state == 0:
         state = 1
     elif state == 1:
@@ -126,17 +128,31 @@ def mouseclick(pos):
 #                if number in exposed in list1_numbers and list2_numbers:
 #                    exposed = [122333333, 23333]
 #						exposed != []
-
+            turns = turns + 1
+    
+            print turns
 
             if cards[1] in exposed:
-                CARD2_WIDTH = 50
-                CARD2_WIDTH_2 = CARD_WIDTH*2
+                if exposed[0] == exposed[1]:
+                    CARD2_WIDTH = 0
+                    CARD2_WIDTH_2 =  0
+                else:
+                    CARD2_WIDTH = 50
+                    CARD2_WIDTH_2 = CARD_WIDTH*2
             if cards[2] in exposed:
-                CARD3_WIDTH = CARD_WIDTH*2
-                CARD3_WIDTH_2 = CARD_WIDTH*3     
+                if exposed[0] == exposed[1]:
+                    CARD3_WIDTH = 0
+                    CARD3_WIDTH_2 = 0
+                else:
+                    CARD3_WIDTH = CARD_WIDTH*2
+                    CARD3_WIDTH_2 = CARD_WIDTH*3     
             if cards[3] in exposed:
-                CARD4_WIDTH = CARD_WIDTH*3	
-                CARD4_WIDTH_2 = CARD_WIDTH*4
+                if exposed[0] == exposed[1]:
+                    CARD4_WIDTH = 0
+                    CARD4_WIDTH_2 = 0                
+                else:                    
+                    CARD4_WIDTH = CARD_WIDTH*3	
+                    CARD4_WIDTH_2 = CARD_WIDTH*4
             if cards[4] in exposed:
                 CARD5_WIDTH = CARD_WIDTH*4
                 CARD5_WIDTH_2 = CARD_WIDTH*5
@@ -198,6 +214,8 @@ def mouseclick(pos):
         if state == 2:
                 exposed.append(cards[1])                
         elif state == 3:
+            
+            turns = turns + 1
             
             if cards[0] in exposed:
                 CARD1_WIDTH = 50
@@ -262,6 +280,7 @@ def mouseclick(pos):
                 exposed.append(cards[2])
         elif state > 2:
             
+            turns = turns + 1
             
             if cards[0] in exposed:
                 CARD1_WIDTH = 50
@@ -327,6 +346,7 @@ def mouseclick(pos):
                 exposed.append(cards[3])                
         elif state > 2:
             
+            turns = turns + 1
             
             if cards[0] in exposed:
                 CARD1_WIDTH = 50
@@ -391,6 +411,7 @@ def mouseclick(pos):
                 exposed.append(cards[4])                
         elif state > 2:
             
+            turns = turns + 1
                        
             if cards[0] in exposed:
                 CARD1_WIDTH = 50
@@ -455,6 +476,7 @@ def mouseclick(pos):
                 exposed.append(cards[5])                
         elif state > 2:
             
+            turns = turns + 1
             
             if cards[0] in exposed:
                 CARD1_WIDTH = 50
@@ -519,6 +541,7 @@ def mouseclick(pos):
                 exposed.append(cards[6])                
         elif state > 2:
             
+            turns = turns + 1
             
             if cards[0] in exposed:
                 CARD1_WIDTH = 50
@@ -584,6 +607,7 @@ def mouseclick(pos):
                 exposed.append(cards[7])                
         elif state > 2:
             
+            turns = turns + 1
             
             if cards[0] in exposed:
                 CARD1_WIDTH = 50
@@ -648,6 +672,7 @@ def mouseclick(pos):
                 exposed.append(cards[8])
         elif state > 2:
             
+            turns = turns + 1
             
             if cards[0] in exposed:
                 CARD1_WIDTH = 50
@@ -713,6 +738,7 @@ def mouseclick(pos):
                 exposed.append(cards[9])
         elif state > 2:
             
+            turns = turns + 1
             
             if cards[0] in exposed:
                 CARD1_WIDTH = 50
@@ -777,6 +803,7 @@ def mouseclick(pos):
                 exposed.append(cards[10])
         elif state > 2:
             
+            turns = turns + 1
             
             if cards[0] in exposed:
                 CARD1_WIDTH = 50
@@ -842,6 +869,8 @@ def mouseclick(pos):
                 exposed.append(cards[11])
         elif state > 2:
             
+            turns = turns + 1
+            
             
             if cards[0] in exposed:
                 CARD1_WIDTH = 50
@@ -906,6 +935,7 @@ def mouseclick(pos):
                 exposed.append(cards[12])
         elif state > 2:
             
+            turns = turns + 1
             
             if cards[0] in exposed:
                 CARD1_WIDTH = 50
@@ -969,6 +999,8 @@ def mouseclick(pos):
         if state == 2:
                 exposed.append(cards[13])
         elif state > 2:
+            
+            turns = turns + 1
             
             
             if cards[0] in exposed:
@@ -1034,6 +1066,7 @@ def mouseclick(pos):
                 exposed.append(cards[14])
         elif state > 2:
             
+            turns = turns + 1
             
             if cards[0] in exposed:
                 CARD1_WIDTH = 50
@@ -1098,6 +1131,7 @@ def mouseclick(pos):
                 exposed.append(cards[15])
         elif state > 2:
             
+            turns = turns + 1
             
             if cards[0] in exposed:
                 CARD1_WIDTH = 50
@@ -1178,7 +1212,8 @@ def draw(canvas):
 # create frame and add a button and labels
 frame = simplegui.create_frame("Memory", 800, 100)
 frame.add_button("Reset", new_game)
-label = frame.add_label("Turns = 0")
+label = frame.add_label("Turns = " + str(turns))
+#label.set_text("Turns = " + str(turns))
 
 # register event handlers
 frame.set_mouseclick_handler(mouseclick)
